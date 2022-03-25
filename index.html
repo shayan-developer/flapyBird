@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>flapy bird game</title>
     <style>
       html,
       body {
@@ -160,6 +160,11 @@
         body {
           font-size: 14px;
         }
+        .startScreen{
+          transform: translate(-50%, -50%);
+          left: 50%;
+          animation: none;
+        }
         .score {
           font-size: 1rem;
         }
@@ -196,7 +201,7 @@
       <button id="fullScreen">تمام صفحه</button>
     </div>
     <div class="game">
-      <div class="startScreen">برای شروع کلیک کنید</div>
+      <div class="startScreen">برای شروع اینجا کلیک کنید</div>
       <div class="gameMessage hide"></div>
       <div class="gameArea"></div>
     </div>
@@ -318,8 +323,8 @@
         pipeTop.style.transform = "rotate(180deg)";
 
         gameArea.appendChild(pipeTop);
-        let min = player.pipe > 10 ? 150 : 250;
-        let max = player.pipe > 10 ? 250 : 350;
+        let min = 150 
+        let max = 250 
 
         let pipeSpacing = Math.floor(Math.random() * max) + min;
 
