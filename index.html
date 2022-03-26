@@ -1,8 +1,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>flapy bird game</title>
     <style>
       html,
@@ -139,7 +142,6 @@
       #coinText {
         position: absolute;
         right: 20%;
-
       }
       @keyframes moveIt {
         from {
@@ -160,7 +162,7 @@
         body {
           font-size: 14px;
         }
-        .startScreen{
+        .startScreen {
           transform: translate(-50%, -50%);
           left: 50%;
           animation: none;
@@ -188,7 +190,7 @@
           top: 28px;
         }
         #coinText {
-          right: 45%
+          right: 45%;
         }
       }
     </style>
@@ -229,17 +231,16 @@
       document.addEventListener("touchstart", touchStart);
       document.addEventListener("touchend", touchEnd);
 
-
       fullScreenBtn.addEventListener("click", () => {
         document.body.requestFullscreen();
       });
 
       function touchStart(event) {
-        keys['touch'] = true;
+        keys["touch"] = true;
       }
 
       function touchEnd(event) {
-        keys['touch'] = false;
+        keys["touch"] = false;
       }
 
       function pressOn(event) {
@@ -319,12 +320,12 @@
         pipeTop.style.top = "0px";
         pipeTop.x = pipeTop.start;
         pipeTop.id = player.pipe;
-        pipeTop.style.backgroundImage = "url(pipe.png)";
+        pipeTop.style.backgroundImage = "url(pipe-min.png)";
         pipeTop.style.transform = "rotate(180deg)";
 
         gameArea.appendChild(pipeTop);
-        let min = 150 
-        let max = 250 
+        let min = 150;
+        let max = 250;
 
         let pipeSpacing = Math.floor(Math.random() * max) + min;
 
@@ -349,7 +350,7 @@
         pipeBottom.style.bottom = "0px";
         pipeBottom.x = pipeTop.start;
         pipeBottom.id = player.pipe;
-        pipeBottom.style.backgroundImage = "url(pipe.png)";
+        pipeBottom.style.backgroundImage = "url(pipe-min.png)";
         gameArea.appendChild(pipeBottom);
         gameArea.appendChild(coin);
       }
